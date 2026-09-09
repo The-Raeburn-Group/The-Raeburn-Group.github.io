@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="The Raeburn Group">
+  <rect width="64" height="64" rx="14" fill="#0C0F12"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#FEFEFB" stroke-width="3"/>
+  <path d="M22 45V19h13.5c7 0 11 3.8 11 9.2 0 4.2-2.5 7.2-6.8 8.4L47 45h-7.2l-6.3-7.5H28V45h-6Zm6-13h7c3.5 0 5.5-1.2 5.5-3.8 0-2.5-2-3.7-5.5-3.7h-7V32Z" fill="#FEFEFB"/>
+</svg>

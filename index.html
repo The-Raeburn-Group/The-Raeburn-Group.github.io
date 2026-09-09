@@ -5,139 +5,242 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0C0F12">
   <meta name="color-scheme" content="dark">
-  <title>Engineering | The Raeburn Group</title>
-  <meta name="description" content="The Raeburn Group engineering and open-source presence across technology, automation and digital infrastructure.">
-  <meta property="og:title" content="Engineering | The Raeburn Group">
-  <meta property="og:description" content="Selected engineering, open-source projects, standards and technical work from The Raeburn Group.">
+  <title>Open Engineering | The Raeburn Group</title>
+  <meta name="description" content="Selected open engineering from The Raeburn Group: inspect the code, run the tools yourself, and keep control of your own infrastructure.">
+  <meta property="og:title" content="Open Engineering | The Raeburn Group">
+  <meta property="og:description" content="Selected public tools from The Raeburn Group. Open enough to inspect and use; deliberately not the whole engineering estate.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://engineering.theraeburngroup.com/">
+  <meta property="og:url" content="https://the-raeburn-group.github.io/">
   <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="https://engineering.theraeburngroup.com/">
+  <link rel="canonical" href="https://the-raeburn-group.github.io/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/motion.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
+<div class="page-glow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href="/" aria-label="The Raeburn Group Engineering home">
+    <a class="brand" href="/" aria-label="The Raeburn Group Open Engineering home">
       <span class="mark" aria-hidden="true">R</span>
-      <span class="brand-copy"><strong>The Raeburn Group</strong><span>Engineering</span></span>
+      <span class="brand-copy"><strong>The Raeburn Group</strong><span>Open Engineering</span></span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#portfolio">Portfolio</a>
       <a href="#tools">Tools</a>
-      <a href="#projects">Projects</a>
+      <a href="#boundary">Boundary</a>
+      <a href="#principles">Principles</a>
       <a href="#trust">Trust</a>
     </nav>
+    <a class="header-link" href="https://github.com/The-Raeburn-Group">GitHub <span aria-hidden="true">↗</span></a>
   </div>
 </header>
 
 <main id="main-content">
-  <section class="hero shell">
-    <div class="eyebrow">THE RAEBURN GROUP / ENGINEERING</div>
-    <h1>Technology built for practical operating environments.</h1>
-    <p class="lede">Engineering across software, automation, AI systems and digital infrastructure — with clear ownership, proportionate controls and evidence-led maturity.</p>
-    <div class="actions">
-      <a class="button primary" href="#tools">Browse tools</a>
-      <a class="button" href="https://github.com/The-Raeburn-Group">View GitHub</a>
+  <section class="hero shell" aria-labelledby="hero-title">
+    <div class="hero-copy" data-reveal>
+      <div class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> SELECTED OPEN ENGINEERING</div>
+      <h1 id="hero-title">Inspect the work.<br><span>Take the tools.</span><br>Build your own.</h1>
+      <p class="lede">A deliberately selected part of The Raeburn Group engineering estate. The published software is there to inspect, learn from and run on your own infrastructure.</p>
+      <div class="actions">
+        <a class="button primary" href="#tools">Explore the tools <span aria-hidden="true">↓</span></a>
+        <a class="button ghost" href="https://github.com/The-Raeburn-Group">View organisation <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-meta" aria-label="Open engineering model">
+        <div><strong>05</strong><span>selected public tools</span></div>
+        <div><strong>YOURS</strong><span>infrastructure & credentials</span></div>
+        <div><strong>PAID</strong><span>services beyond the code</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true" data-reveal>
+      <div class="orbit orbit-a"></div>
+      <div class="orbit orbit-b"></div>
+      <div class="orbit orbit-c"></div>
+      <div class="visual-grid"></div>
+      <div class="core-mark">R</div>
+      <div class="orbit-node node-a"></div>
+      <div class="orbit-node node-b"></div>
+      <div class="orbit-node node-c"></div>
+      <span class="visual-caption">OPEN / SELECTED / REVIEWABLE</span>
     </div>
   </section>
 
-  <section id="portfolio" class="section shell">
+  <section class="manifesto" data-reveal>
+    <div class="shell manifesto-inner">
+      <p class="manifesto-kicker">OPEN, DELIBERATELY.</p>
+      <p class="manifesto-copy">Public enough to verify the engineering. <span>Private enough to protect what makes the business distinctive.</span></p>
+    </div>
+  </section>
+
+  <section id="tools" class="section shell" data-reveal>
     <div class="section-head">
       <span>01</span>
       <div>
-        <h2>Group portfolio</h2>
-        <p>The engineering organisation supports selected work across the wider Group. Public repositories do not represent the balance of the Group's commercial activity.</p>
+        <div class="eyebrow">SELECTED TOOLS</div>
+        <h2>Useful on their own.<br>Stronger by design.</h2>
+        <p>These repositories are intentionally public. They demonstrate real engineering without publishing the Group's entire orchestration, commercial workflow or internal operating stack.</p>
       </div>
     </div>
-    <div class="company-grid">
-      <a class="card" href="https://consulting.theraeburngroup.com"><small>CONSULTING</small><h3>Raeburn Consulting</h3><p>Strategy, transformation, AI and technology consulting.</p></a>
-      <a class="card" href="https://technology.theraeburngroup.com"><small>TECHNOLOGY</small><h3>Raeburn Technologies</h3><p>Software, platforms, AI systems and digital products.</p></a>
-      <a class="card" href="https://automationlabs.theraeburngroup.com"><small>AUTOMATION</small><h3>Raeburn Automation Labs</h3><p>Human-controlled automation, agents and operational tooling.</p></a>
-      <a class="card" href="https://recruitment.theraeburngroup.com"><small>TALENT</small><h3>TRG Recruitment</h3><p>Recruitment, executive search and talent intelligence.</p></a>
-      <a class="card" href="https://ventures.theraeburngroup.com"><small>VENTURES</small><h3>Raeburn Ventures</h3><p>Opportunity validation, venture development and operating support.</p></a>
-      <a class="card" href="https://digitalassets.theraeburngroup.com"><small>INFRASTRUCTURE</small><h3>Raeburn Digital Assets</h3><p>Tokenisation, blockchain architecture and digital-asset infrastructure.</p></a>
+
+    <div class="tool-grid">
+      <a class="tool-card featured" data-tilt href="https://github.com/The-Raeburn-Group/RaeburnAI-Workflow-Auditor">
+        <div class="tool-top"><span class="tool-number">01</span><span class="tool-state">PUBLIC</span></div>
+        <div class="tool-icon" aria-hidden="true"><span></span><span></span><span></span></div>
+        <small>WORKFLOW INTELLIGENCE</small>
+        <h3>Workflow Auditor</h3>
+        <p>Analyse business processes, surface automation opportunities and structure implementation roadmaps.</p>
+        <div class="tool-footer"><span>Open repository</span><span aria-hidden="true">↗</span></div>
+      </a>
+
+      <a class="tool-card" data-tilt href="https://github.com/The-Raeburn-Group/Universal-AI-Knowledge-Graph">
+        <div class="tool-top"><span class="tool-number">02</span><span class="tool-state">PUBLIC</span></div>
+        <div class="tool-icon graph-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <small>KNOWLEDGE SYSTEMS</small>
+        <h3>Universal AI Knowledge Graph</h3>
+        <p>Semantic knowledge infrastructure for connecting documents, systems and organisational context.</p>
+        <div class="tool-footer"><span>Open repository</span><span aria-hidden="true">↗</span></div>
+      </a>
+
+      <a class="tool-card" data-tilt href="https://github.com/The-Raeburn-Group/RaeburnAI-Enterprise-MCP-Server">
+        <div class="tool-top"><span class="tool-number">03</span><span class="tool-state">PUBLIC</span></div>
+        <div class="tool-icon mcp-icon" aria-hidden="true"><b></b><b></b><b></b></div>
+        <small>INTEGRATION</small>
+        <h3>Enterprise MCP Server</h3>
+        <p>A controlled Model Context Protocol foundation for connecting assistants to enterprise systems.</p>
+        <div class="tool-footer"><span>Open repository</span><span aria-hidden="true">↗</span></div>
+      </a>
+
+      <a class="tool-card" data-tilt href="https://github.com/The-Raeburn-Group/RaeburnAI-AgentOS">
+        <div class="tool-top"><span class="tool-number">04</span><span class="tool-state">PUBLIC</span></div>
+        <div class="tool-icon agent-icon" aria-hidden="true"><em></em><em></em><em></em></div>
+        <small>AI ORCHESTRATION</small>
+        <h3>AgentOS</h3>
+        <p>Multi-agent orchestration with shared context, approval boundaries and local/cloud model support.</p>
+        <div class="tool-footer"><span>Open repository</span><span aria-hidden="true">↗</span></div>
+      </a>
+
+      <a class="tool-card" data-tilt href="https://github.com/The-Raeburn-Group/RaeburnAI-Business-Twin">
+        <div class="tool-top"><span class="tool-number">05</span><span class="tool-state">PUBLIC</span></div>
+        <div class="tool-icon twin-icon" aria-hidden="true"><span></span><span></span></div>
+        <small>BUSINESS MODELLING</small>
+        <h3>Business Twin</h3>
+        <p>Model organisations, workflows, teams and operating scenarios as a structured digital twin.</p>
+        <div class="tool-footer"><span>Open repository</span><span aria-hidden="true">↗</span></div>
+      </a>
+
+      <div class="tool-card quiet-card" aria-label="More engineering remains private">
+        <div class="tool-top"><span class="tool-number">—</span><span class="tool-state private">PRIVATE</span></div>
+        <div class="private-sigil" aria-hidden="true"><span></span></div>
+        <small>THE REST OF THE ESTATE</small>
+        <h3>Selected means selected.</h3>
+        <p>Internal orchestration, proprietary workflows, customer implementations and commercial operating systems are not published by default.</p>
+        <div class="tool-footer"><span>Deliberately not a repository</span><span aria-hidden="true">●</span></div>
+      </div>
     </div>
   </section>
 
-  <section id="tools" class="section shell service-model">
-    <div class="section-head">
-      <span>02</span>
+  <section id="boundary" class="section boundary-section" data-reveal>
+    <div class="shell">
+      <div class="section-head compact">
+        <span>02</span>
+        <div><div class="eyebrow">THE BOUNDARY</div><h2>Code is open.<br>The business is not.</h2></div>
+      </div>
+      <div class="boundary-grid">
+        <article>
+          <span class="boundary-index">A</span>
+          <small>PROVIDED</small>
+          <h3>The published tool</h3>
+          <p>Source code, repository documentation, licence information, examples and any deployment instructions already included with that project.</p>
+        </article>
+        <article>
+          <span class="boundary-index">B</span>
+          <small>KEPT PRIVATE</small>
+          <h3>Raeburn's operating advantage</h3>
+          <p>Internal orchestration, proprietary workflows, private connectors, commercial methods, customer implementations and other non-published systems.</p>
+        </article>
+        <article class="commercial-card">
+          <span class="boundary-index">C</span>
+          <small>COMMERCIAL</small>
+          <h3>Everything beyond the tool</h3>
+          <p>Hosting, deployment, configuration, integration, customisation, migration, support, training, maintenance and managed operation.</p>
+          <a href="mailto:contact@theraeburngroup.com?subject=Engineering%20services%20enquiry">Discuss paid implementation <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles" class="section shell principles-section" data-reveal>
+    <div class="principles-intro">
+      <div class="eyebrow">ENGINEERING PRINCIPLES</div>
+      <h2>Quiet confidence is more convincing than claims.</h2>
+      <p>Public work should be inspectable. Limitations should be visible. Security and maturity should be evidenced rather than implied.</p>
+    </div>
+    <div class="principles-list">
+      <div><strong>01</strong><span>Clear ownership</span><small>Know who maintains the work.</small></div>
+      <div><strong>02</strong><span>Reviewable security</span><small>Controls over decorative badges.</small></div>
+      <div><strong>03</strong><span>Human control</span><small>Approval where actions carry consequence.</small></div>
+      <div><strong>04</strong><span>Explicit maturity</span><small>Foundation means foundation.</small></div>
+      <div><strong>05</strong><span>Portable by default</span><small>Your infrastructure, your credentials.</small></div>
+      <div><strong>06</strong><span>Evidence-led assurance</span><small>Implemented, planned and certified are different things.</small></div>
+    </div>
+  </section>
+
+  <section class="section portfolio-band" data-reveal>
+    <div class="shell portfolio-inner">
       <div>
-        <h2>Use the tools. Run them yourself.</h2>
-        <p>Published tools are provided for self-directed use under the licence and terms stated in each repository. The public engineering site and repositories provide the software and the documentation needed to understand it.</p>
+        <div class="eyebrow">THE WIDER GROUP</div>
+        <h2>Engineering sits inside a larger operating group.</h2>
       </div>
-    </div>
-
-    <div class="service-grid">
-      <div class="service-card included">
-        <small>PROVIDED</small>
-        <h3>The tools</h3>
-        <p>Source code, repository documentation, licence information and any published examples or deployment instructions that form part of the project.</p>
+      <div class="portfolio-links">
+        <a href="https://consulting.theraeburngroup.com"><span>01</span>Raeburn Consulting <b>↗</b></a>
+        <a href="https://technology.theraeburngroup.com"><span>02</span>Raeburn Technologies <b>↗</b></a>
+        <a href="https://automationlabs.theraeburngroup.com"><span>03</span>Raeburn Automation Labs <b>↗</b></a>
+        <a href="https://recruitment.theraeburngroup.com"><span>04</span>TRG Recruitment <b>↗</b></a>
+        <a href="https://ventures.theraeburngroup.com"><span>05</span>Raeburn Ventures <b>↗</b></a>
+        <a href="https://digitalassets.theraeburngroup.com"><span>06</span>Raeburn Digital Assets <b>↗</b></a>
       </div>
-      <div class="service-card paid">
-        <small>COMMERCIAL SERVICES</small>
-        <h3>Anything beyond the tools</h3>
-        <p>Hosting, deployment, configuration, integration, customisation, migration, support, training, maintenance and managed operation are paid Raeburn services.</p>
-        <a href="mailto:contact@theraeburngroup.com?subject=Engineering%20implementation%20enquiry">Discuss a commercial engagement →</a>
-      </div>
-    </div>
-
-    <p class="policy-line"><strong>Simple principle:</strong> take the published tool and use it yourself. If you want Raeburn to do work around it, that work is a commercial service.</p>
-  </section>
-
-  <section id="engineering" class="section shell split">
-    <div><div class="eyebrow">ENGINEERING PRINCIPLES</div><h2>Built with controls proportionate to the work.</h2></div>
-    <div class="principles">
-      <div><strong>01</strong><span>Clear ownership and documentation</span></div>
-      <div><strong>02</strong><span>Security and privacy by design</span></div>
-      <div><strong>03</strong><span>Human approval for high-impact automation</span></div>
-      <div><strong>04</strong><span>Modular, maintainable and interoperable systems</span></div>
-      <div><strong>05</strong><span>Explicit maturity and deployment status</span></div>
-      <div><strong>06</strong><span>Evidence-led assurance statements</span></div>
     </div>
   </section>
 
-  <section id="projects" class="section shell">
-    <div class="section-head">
-      <span>03</span>
-      <div>
-        <h2>Selected public engineering</h2>
-        <p>Current public repositories are primarily maintained through Raeburn Technologies and Raeburn Automation Labs.</p>
-      </div>
-    </div>
-    <div class="project-list">
-      <a href="https://github.com/The-Raeburn-Group/Universal-AI-Knowledge-Graph"><div><small>KNOWLEDGE SYSTEMS</small><h3>Universal AI Knowledge Graph</h3></div><span>Semantic knowledge infrastructure across business information sources →</span></a>
-      <a href="https://github.com/The-Raeburn-Group/RaeburnAI-Enterprise-MCP-Server"><div><small>INTEGRATION</small><h3>RaeburnAI Enterprise MCP Server</h3></div><span>Controlled MCP connectivity for enterprise tools and systems →</span></a>
-      <a href="https://github.com/The-Raeburn-Group/RaeburnAI-AgentOS"><div><small>AI ORCHESTRATION</small><h3>RaeburnAI AgentOS</h3></div><span>Multi-agent orchestration and controlled AI workflows →</span></a>
-    </div>
-    <p class="note">RaeburnAI is a technology initiative within the wider Raeburn Technologies portfolio; it is not the identity of The Raeburn Group as a whole.</p>
-  </section>
-
-  <section id="trust" class="section shell trust">
-    <div><div class="eyebrow">TRUST & GOVERNANCE</div><h2>Security claims should be reviewable, not decorative.</h2></div>
+  <section id="trust" class="section shell trust" data-reveal>
     <div>
-      <p>Project documentation distinguishes implemented controls, planned work and independent certification. Repository-specific documentation remains authoritative for each project's maturity and deployment status.</p>
+      <div class="eyebrow">TRUST & GOVERNANCE</div>
+      <h2>Trust should survive inspection.</h2>
+    </div>
+    <div class="trust-copy">
+      <p>Repository documentation distinguishes implemented controls, planned work and independent certification. Project-specific documentation remains authoritative for maturity and deployment status.</p>
       <div class="link-row">
-        <a href="https://trust.theraeburngroup.com">Trust Centre →</a>
-        <a href="https://status.theraeburngroup.com">System Status →</a>
-        <a href="https://theraeburngroup.com">Corporate website →</a>
+        <a href="https://trust.theraeburngroup.com"><span>Trust Centre</span><b>↗</b></a>
+        <a href="https://status.theraeburngroup.com"><span>System Status</span><b>↗</b></a>
+        <a href="https://github.com/The-Raeburn-Group"><span>GitHub Organisation</span><b>↗</b></a>
+        <a href="https://theraeburngroup.com"><span>Corporate Website</span><b>↗</b></a>
       </div>
     </div>
   </section>
 
-  <section class="contact shell">
-    <div><div class="eyebrow">COMMERCIAL SERVICES</div><h2>Need Raeburn to deploy, integrate, customise or operate a tool?</h2></div>
-    <a class="button primary" href="mailto:contact@theraeburngroup.com?subject=Engineering%20services%20enquiry">Contact Raeburn</a>
+  <section class="closing shell" data-reveal>
+    <div class="closing-line" aria-hidden="true"></div>
+    <div class="closing-copy">
+      <div class="eyebrow">THE SIMPLE MODEL</div>
+      <h2>Take the tool.<br><span>Keep control.</span></h2>
+      <p>If you want Raeburn to deploy, integrate, customise, host, maintain or operate it, that is a separate paid service.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/The-Raeburn-Group">Explore GitHub <span aria-hidden="true">↗</span></a>
+        <a class="button ghost" href="mailto:contact@theraeburngroup.com?subject=Engineering%20services%20enquiry">Commercial services</a>
+      </div>
+    </div>
+    <div class="closing-mark" aria-hidden="true">R</div>
   </section>
 </main>
 
 <footer>
   <div class="shell footer-inner">
-    <span>© The Raeburn Group</span>
-    <div><a href="https://theraeburngroup.com">Corporate</a><a href="https://github.com/The-Raeburn-Group">GitHub</a><a href="https://trust.theraeburngroup.com">Trust</a></div>
+    <div><strong>The Raeburn Group</strong><span>Selected Open Engineering</span></div>
+    <div class="footer-links"><a href="https://theraeburngroup.com">Corporate</a><a href="https://github.com/The-Raeburn-Group">GitHub</a><a href="https://trust.theraeburngroup.com">Trust</a><a href="mailto:contact@theraeburngroup.com">Contact</a></div>
+    <span class="copyright">© 2026 The Raeburn Group</span>
   </div>
 </footer>
 </body>

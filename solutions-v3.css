@@ -33,12 +33,12 @@ body[data-page="solutions"] .solutions-actions{margin-top:17px}
 body[data-page="solutions"] .solutions-hero-art{
   position:absolute;
   z-index:1;
-  top:-12px;
+  top:0;
   bottom:0;
   right:calc((100vw - 100%) / -2);
   width:59vw;
-  height:auto!important;
-  min-height:100%;
+  height:100%!important;
+  min-height:100%!important;
   background:none!important;
   filter:none!important;
   pointer-events:none;
@@ -48,6 +48,8 @@ body[data-page="solutions"] .solutions-hero-art::before{
   content:"";
   position:absolute;
   inset:0;
+  width:100%;
+  height:100%;
   background-image:url("https://res.cloudinary.com/u7dpgaxh/image/upload/c_limit,w_1400/f_auto/q_auto/v1789058406/solutions_header_image.png");
   background-repeat:no-repeat;
   background-size:cover;
@@ -236,7 +238,7 @@ body[data-page="solutions"] .solutions-heading h2{letter-spacing:-.038em}
   body[data-page="solutions"] .solutions-hero{display:grid;grid-template-columns:1fr;padding-top:42px;min-height:auto}
   body[data-page="solutions"] .solutions-copy{width:100%;max-width:none}
   body[data-page="solutions"] .solutions-copy h1 em{white-space:normal}
-  body[data-page="solutions"] .solutions-hero-art{position:relative;top:auto;right:auto;width:100%;height:360px!important;min-height:360px;margin-top:12px}
+  body[data-page="solutions"] .solutions-hero-art{position:relative;top:auto;right:auto;width:100%;height:360px!important;min-height:360px!important;margin-top:12px}
   body[data-page="solutions"] .solutions-hero-art::before{background-size:cover;background-position:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%)}
   body[data-page="solutions"] .process-flow{grid-template-columns:1fr 1fr;gap:10px}
   body[data-page="solutions"] .process-step,
@@ -248,7 +250,7 @@ body[data-page="solutions"] .solutions-heading h2{letter-spacing:-.038em}
   body[data-page="solutions"] .footer-links{justify-content:flex-start}
 }
 @media(max-width:560px){
-  body[data-page="solutions"] .solutions-hero-art{height:300px!important;min-height:300px}
+  body[data-page="solutions"] .solutions-hero-art{height:300px!important;min-height:300px!important}
   body[data-page="solutions"] .solutions-keywords{font-size:7px;right:2%}
   body[data-page="solutions"] .solutions-hero-caption{font-size:7px;left:5%;right:2%;bottom:6%}
   body[data-page="solutions"] .process-flow{grid-template-columns:1fr}

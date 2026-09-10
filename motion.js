@@ -17,20 +17,23 @@
     link.href = WHITE_R;
   });
 
-  const isHome = document.body?.dataset?.page === 'home';
-  if (isHome) {
-    const loadStyle = (href) => {
-      if (document.querySelector(`link[href^="${href}"]`)) return;
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = `${href}?v=20260910-9`;
-      document.head.appendChild(link);
-    };
+  const loadStyle = (href, version = '20260910-11') => {
+    if (document.querySelector(`link[href^="${href}"]`)) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${href}?v=${version}`;
+    document.head.appendChild(link);
+  };
 
+  const page = document.body?.dataset?.page;
+  if (page === 'home') {
     loadStyle('/home-v3.css');
     loadStyle('/home-v4.css');
     loadStyle('/home-v5.css');
     loadStyle('/brand-assets.css');
+  }
+  if (page === 'tools') {
+    loadStyle('/tools-v3.css');
   }
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

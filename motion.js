@@ -6,12 +6,13 @@
       if (document.querySelector(`link[href^="${href}"]`)) return;
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = `${href}?v=20260910-4`;
+      link.href = `${href}?v=20260910-5`;
       document.head.appendChild(link);
     };
 
     loadStyle('/home-v3.css');
     loadStyle('/home-v4.css');
+    loadStyle('/home-v5.css');
   }
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

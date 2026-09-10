@@ -1,5 +1,26 @@
 /* Solutions precision pass v3 — final fidelity refinements against approved reference. */
 
+/* Header-to-hero blend: remove the hard horizontal cut and fade the header into the artwork. */
+body[data-page="solutions"] .site-header{
+  background:linear-gradient(180deg,rgba(2,5,10,.98) 0%,rgba(2,5,10,.90) 42%,rgba(2,5,10,.72) 72%,rgba(2,5,10,.28) 92%,rgba(2,5,10,0) 100%);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+  border-bottom:0;
+  overflow:visible;
+}
+body[data-page="solutions"] .site-header::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:0;
+  right:0;
+  top:100%;
+  height:76px;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(2,5,10,.72) 0%,rgba(2,5,10,.46) 28%,rgba(2,5,10,.20) 62%,rgba(2,5,10,0) 100%);
+}
+body[data-page="solutions"] .site-header .nav-wrap{position:relative;z-index:2}
+
 /* Hero: use the approved Cloudinary artwork as a full-bleed visual, not a boxed image. */
 body[data-page="solutions"] .solutions-hero{
   min-height:446px;
@@ -235,10 +256,11 @@ body[data-page="solutions"] .solutions-heading h2{letter-spacing:-.038em}
   body[data-page="solutions"] .process-step:first-child{padding-left:18px!important}
 }
 @media(max-width:860px){
+  body[data-page="solutions"] .site-header::after{height:42px}
   body[data-page="solutions"] .solutions-hero{display:grid;grid-template-columns:1fr;padding-top:42px;min-height:auto}
   body[data-page="solutions"] .solutions-copy{width:100%;max-width:none}
   body[data-page="solutions"] .solutions-copy h1 em{white-space:normal}
-  body[data-page="solutions"] .solutions-hero-art{position:relative;top:auto;right:auto;width:100%;height:360px!important;min-height:360px!important;margin-top:12px}
+  body[data-page="solutions"] .solutions-hero-art{position:relative;top:auto;right:auto;width:100%;height:360px!important;min-height:360px;margin-top:12px}
   body[data-page="solutions"] .solutions-hero-art::before{background-size:cover;background-position:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%)}
   body[data-page="solutions"] .process-flow{grid-template-columns:1fr 1fr;gap:10px}
   body[data-page="solutions"] .process-step,
@@ -250,7 +272,7 @@ body[data-page="solutions"] .solutions-heading h2{letter-spacing:-.038em}
   body[data-page="solutions"] .footer-links{justify-content:flex-start}
 }
 @media(max-width:560px){
-  body[data-page="solutions"] .solutions-hero-art{height:300px!important;min-height:300px!important}
+  body[data-page="solutions"] .solutions-hero-art{height:300px!important;min-height:300px}
   body[data-page="solutions"] .solutions-keywords{font-size:7px;right:2%}
   body[data-page="solutions"] .solutions-hero-caption{font-size:7px;left:5%;right:2%;bottom:6%}
   body[data-page="solutions"] .process-flow{grid-template-columns:1fr}

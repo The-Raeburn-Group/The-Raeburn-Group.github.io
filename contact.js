@@ -1,9 +1,26 @@
 (() => {
   const form = document.querySelector('#mail-form');
   if (!form) return;
+
+  const challengeField = form.querySelector('textarea[name="challenge"]');
+  const counter = form.querySelector('.char-count');
+
+  const updateCounter = () => {
+    if (!challengeField || !counter) return;
+    const used = challengeField.value.length;
+    const max = Number(challengeField.maxLength || 1000);
+    counter.textContent = `${used.toLocaleString('en-GB')} / ${max.toLocaleString('en-GB')}`;
+  };
+
+  if (challengeField) {
+    challengeField.addEventListener('input', updateCounter);
+    updateCounter();
+  }
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
+
     const data = new FormData(form);
     const name = String(data.get('name') || '').trim();
     const email = String(data.get('email') || '').trim();
@@ -18,6 +35,7 @@
       'Business challenge:',
       challenge
     ].filter((line, index, arr) => line !== '' || (index > 0 && arr[index - 1] !== '')).join('\n');
+
     window.location.href = `mailto:contact@theraeburngroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 })();

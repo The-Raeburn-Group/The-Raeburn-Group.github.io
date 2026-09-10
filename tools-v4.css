@@ -1,0 +1,181 @@
+/* Tools page final fidelity pass v4 — targeted refinements only. */
+
+/* Hero: stronger atmospheric planet, sweeping light and larger Earth horizon */
+body[data-page="tools"] .tools-hero-art::before{
+  content:"";
+  position:absolute;
+  width:410px;
+  height:410px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:radial-gradient(circle,transparent 48%,rgba(91,115,255,.08) 58%,transparent 72%);
+  filter:blur(8px);
+  pointer-events:none;
+}
+body[data-page="tools"] .tools-globe{
+  width:272px;
+  height:272px;
+  box-shadow:
+    0 0 10px rgba(185,199,255,.95),
+    0 0 28px rgba(109,137,255,.78),
+    0 0 62px rgba(74,100,255,.6),
+    0 0 118px rgba(43,69,224,.46),
+    inset 0 0 72px rgba(98,121,255,.34);
+}
+body[data-page="tools"] .tools-globe::before{
+  opacity:.68;
+  background-image:
+    radial-gradient(circle,rgba(232,237,255,.95) 0 1px,transparent 1.35px),
+    radial-gradient(ellipse at 32% 34%,rgba(89,132,255,.36) 0 10%,transparent 12%),
+    radial-gradient(ellipse at 68% 61%,rgba(74,111,229,.34) 0 12%,transparent 14%),
+    radial-gradient(ellipse at 54% 78%,rgba(63,101,216,.24) 0 10%,transparent 12%);
+  background-size:14px 13px,100% 100%,100% 100%,100% 100%;
+}
+body[data-page="tools"] .tools-globe::after{
+  inset:-21%;
+  border-width:2px;
+  border-color:rgba(151,171,255,.98);
+  box-shadow:0 0 8px rgba(205,216,255,.95),0 0 24px #6f88ff,0 0 42px rgba(85,110,255,.84);
+  transform:rotate(-17deg) scaleY(.47);
+}
+body[data-page="tools"] .tools-centre-r{width:103px;height:103px}
+body[data-page="tools"] .tools-centre-r img{
+  width:100%;
+  height:100%;
+  filter:drop-shadow(0 0 14px rgba(190,201,255,.7)) drop-shadow(0 0 28px rgba(91,112,255,.42));
+}
+body[data-page="tools"] .tool-ring{border-color:rgba(126,149,255,.69)}
+body[data-page="tools"] .tool-ring.r1{width:378px;height:296px}
+body[data-page="tools"] .tool-ring.r2{width:450px;height:368px}
+body[data-page="tools"] .tool-ring.r3{width:318px;height:418px}
+body[data-page="tools"] .tool-ring i{background:#99adff;box-shadow:0 0 9px #9fb1ff,0 0 24px #6e88ff,0 0 38px rgba(87,108,255,.48)}
+body[data-page="tools"] .tools-world-arc{
+  right:-46%;
+  bottom:-29%;
+  width:145%;
+  height:59%;
+  border-top:2px solid rgba(112,142,255,.82);
+  background:
+    radial-gradient(ellipse at 47% 100%,rgba(37,73,171,.95) 0 16%,rgba(13,32,82,.82) 35%,rgba(4,12,32,.44) 59%,transparent 72%);
+  box-shadow:0 -4px 11px rgba(171,189,255,.55),0 -14px 35px rgba(82,109,255,.42),0 -35px 88px rgba(48,72,183,.2);
+}
+body[data-page="tools"] .tools-world-arc::before{
+  content:"";
+  position:absolute;
+  inset:2% 5% 0 8%;
+  border-radius:inherit;
+  background:
+    radial-gradient(circle at 61% 62%,rgba(255,183,92,.95) 0 1px,transparent 1.7px),
+    radial-gradient(circle at 68% 56%,rgba(255,188,103,.8) 0 1px,transparent 1.6px),
+    radial-gradient(circle at 76% 67%,rgba(255,174,82,.82) 0 1px,transparent 1.6px),
+    radial-gradient(circle at 83% 59%,rgba(255,204,129,.72) 0 1px,transparent 1.5px);
+  background-size:36px 28px,44px 33px,51px 39px,61px 45px;
+  opacity:.66;
+  transform:skewY(-7deg);
+  pointer-events:none;
+}
+body[data-page="tools"] .tools-world-arc::after{opacity:.9;background-size:13px 11px}
+
+/* Hero labels: final positional nudges */
+body[data-page="tools"] .tool-hero-label{color:#8094f3;text-shadow:0 0 12px rgba(89,111,255,.22)}
+body[data-page="tools"] .lbl-friction{left:-18px;top:68px}
+body[data-page="tools"] .lbl-knowledge{left:-52px;top:252px}
+body[data-page="tools"] .lbl-ai{right:-34px;top:70px}
+body[data-page="tools"] .lbl-capable{right:-55px;top:232px}
+body[data-page="tools"] .lbl-open{left:31%;bottom:-1px}
+body[data-page="tools"] .lbl-tomorrow{right:-28px;bottom:-3px}
+
+/* Cards: slightly brighter borders, icons and lower-button glow */
+body[data-page="tools"] .catalogue-card{
+  border-color:rgba(120,145,230,.56);
+  box-shadow:inset 0 1px rgba(255,255,255,.035),0 0 0 1px rgba(42,65,139,.09),0 16px 34px rgba(2,8,24,.18);
+}
+body[data-page="tools"] .catalogue-card:hover{border-color:rgba(128,151,255,.96);box-shadow:0 16px 42px rgba(30,49,124,.35),0 0 34px rgba(76,100,255,.13)}
+body[data-page="tools"] .catalogue-icon{width:56px;height:56px;color:#8197ff;filter:drop-shadow(0 0 9px rgba(134,154,255,.72)) drop-shadow(0 0 22px rgba(65,86,221,.32))}
+body[data-page="tools"] .catalogue-card h2{color:#f7f9ff}
+body[data-page="tools"] .catalogue-card>p{color:#bcc6d8}
+body[data-page="tools"] .badges span{color:#91a8ff;border-color:rgba(95,121,215,.46)}
+body[data-page="tools"] .catalogue-card li{color:#cbd3e1}
+body[data-page="tools"] .card-actions .pill-primary{border-color:#8494ff;box-shadow:0 0 0 1px rgba(124,143,255,.28),0 0 19px rgba(74,97,255,.5),0 8px 24px rgba(36,52,133,.22)}
+body[data-page="tools"] .card-actions .pill-dark{border-color:rgba(138,151,205,.5)}
+
+/* Support illustration: five-panel depth and cleaner illuminated connections */
+body[data-page="tools"] .support-panel{grid-template-columns:.91fr 1.09fr;gap:34px;min-height:282px;padding:26px 32px}
+body[data-page="tools"] .support-visual{height:228px;border-right-color:rgba(108,132,226,.52)}
+body[data-page="tools"] .stack-card.a::before,
+body[data-page="tools"] .stack-card.a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(94,126,255,.52);
+  border-radius:8px;
+  background:linear-gradient(135deg,rgba(26,43,98,.34),rgba(5,11,25,.48));
+  box-shadow:0 0 20px rgba(63,90,255,.11);
+}
+body[data-page="tools"] .stack-card.a::before{transform:translate(-38px,-18px);opacity:.38}
+body[data-page="tools"] .stack-card.a::after{transform:translate(-20px,-9px);opacity:.52}
+body[data-page="tools"] .stack-card.a{left:36px;top:46px;opacity:.62}
+body[data-page="tools"] .stack-card.b{left:58px;top:55px;opacity:.78}
+body[data-page="tools"] .stack-card.c{left:82px;top:66px;opacity:1}
+body[data-page="tools"] .stack-card.c img{width:78px;height:78px}
+body[data-page="tools"] .support-visual::before{
+  left:128px;
+  top:39px;
+  width:224px;
+  height:154px;
+  background:
+    linear-gradient(90deg,rgba(111,139,255,.78),rgba(111,139,255,.14) 78%,transparent) 0 14px/100% 1px no-repeat,
+    linear-gradient(90deg,rgba(111,139,255,.78),rgba(111,139,255,.14) 78%,transparent) 0 76px/100% 1px no-repeat,
+    linear-gradient(90deg,rgba(111,139,255,.78),rgba(111,139,255,.14) 78%,transparent) 0 138px/100% 1px no-repeat;
+  filter:drop-shadow(0 0 6px rgba(95,122,255,.35));
+}
+body[data-page="tools"] .support-visual::after{
+  left:333px;
+  top:49px;
+  width:8px;
+  height:8px;
+  background:#9aafff;
+  box-shadow:0 62px 0 #9aafff,0 124px 0 #9aafff,0 0 17px #7390ff,0 62px 17px #7390ff,0 124px 17px #7390ff;
+}
+body[data-page="tools"] .support-flow{left:350px;right:auto;top:46px;gap:42px}
+body[data-page="tools"] .support-flow span{font-size:9.5px;letter-spacing:.24em;color:#93a5fa;white-space:nowrap}
+body[data-page="tools"] .support-flow span::before{width:38px;background:linear-gradient(90deg,#7895ff,rgba(120,149,255,.08));box-shadow:0 0 10px rgba(103,131,255,.48)}
+body[data-page="tools"] .support-flow span::after{display:none}
+body[data-page="tools"] .support-copy{padding-left:18px}
+body[data-page="tools"] .support-copy .section-kicker{color:#8195ef}
+body[data-page="tools"] .support-copy>p{color:#b8c2d2}
+
+/* Final small-type legibility */
+body[data-page="tools"] .tools-eyebrow,
+body[data-page="tools"] .catalogue-meta .count,
+body[data-page="tools"] .section-kicker{color:#8095f0}
+body[data-page="tools"] .sort-wrap{color:#9aa6ba}
+body[data-page="tools"] .search-box input::placeholder{color:#8792a7}
+
+/* Bottom CTA/footer: slightly tighter like the reference */
+body[data-page="tools"] .tools-bottom-cta{padding:29px 0 28px}
+body[data-page="tools"] .tools-bottom-row{gap:38px}
+body[data-page="tools"] .site-footer{padding:21px 0 12px}
+body[data-page="tools"] .footer-grid{gap:38px}
+body[data-page="tools"] .legal{margin-top:16px;padding-top:11px}
+
+@media(max-width:1180px){
+  body[data-page="tools"] .support-panel{grid-template-columns:.85fr 1.15fr}
+  body[data-page="tools"] .support-flow{left:310px}
+  body[data-page="tools"] .support-visual::after{left:294px}
+}
+@media(max-width:820px){
+  body[data-page="tools"] .support-panel{grid-template-columns:1fr}
+  body[data-page="tools"] .support-copy{padding-left:0}
+  body[data-page="tools"] .tools-world-arc{right:-31%;width:132%}
+}
+@media(max-width:560px){
+  body[data-page="tools"] .support-flow{left:220px}
+  body[data-page="tools"] .support-visual::after{left:205px}
+  body[data-page="tools"] .support-visual::before{left:102px;width:118px}
+  body[data-page="tools"] .stack-card.a{left:18px}
+  body[data-page="tools"] .stack-card.b{left:36px}
+  body[data-page="tools"] .stack-card.c{left:56px}
+}

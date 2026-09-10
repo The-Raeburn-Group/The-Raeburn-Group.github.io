@@ -1,28 +1,112 @@
 /* Solutions precision pass v3 — final fidelity refinements against approved reference. */
 
-/* Hero: use the approved Cloudinary artwork directly so the visual matches the reference. */
+/* Hero: use the approved Cloudinary artwork as a full-bleed visual, not a boxed image. */
 body[data-page="solutions"] .solutions-hero{
-  min-height:448px;
-  grid-template-columns:1.01fr .99fr;
-  gap:40px;
-  padding:28px 0 30px;
+  min-height:446px;
+  position:relative;
+  display:block;
+  padding:25px 0 29px;
 }
-body[data-page="solutions"] .solutions-eyebrow{margin-bottom:12px}
-body[data-page="solutions"] .solutions-copy h1{font-size:clamp(57px,4.9vw,79px);line-height:.92}
-body[data-page="solutions"] .solutions-lede{margin-top:15px;max-width:705px;line-height:1.43}
-body[data-page="solutions"] .solutions-actions{margin-top:18px}
+body[data-page="solutions"] .solutions-copy{
+  position:relative;
+  z-index:4;
+  width:50.5%;
+  max-width:735px;
+}
+body[data-page="solutions"] .solutions-eyebrow{margin-bottom:11px}
+body[data-page="solutions"] .solutions-copy h1{
+  max-width:720px;
+  font-size:clamp(50px,3.45vw,66px)!important;
+  line-height:.95!important;
+  letter-spacing:-.047em!important;
+}
+body[data-page="solutions"] .solutions-copy h1 em{
+  white-space:nowrap;
+}
+body[data-page="solutions"] .solutions-lede{
+  margin-top:14px;
+  max-width:660px;
+  font-size:16px;
+  line-height:1.42;
+}
+body[data-page="solutions"] .solutions-actions{margin-top:17px}
 body[data-page="solutions"] .solutions-hero-art{
-  height:382px;
+  position:absolute;
+  z-index:1;
+  top:-12px;
+  bottom:0;
+  right:calc((100vw - 100%) / -2);
+  width:59vw;
+  height:auto!important;
+  min-height:100%;
+  background:none!important;
+  filter:none!important;
+  pointer-events:none;
+  overflow:visible;
+}
+body[data-page="solutions"] .solutions-hero-art::before{
+  content:"";
+  position:absolute;
+  inset:0;
   background-image:url("https://res.cloudinary.com/u7dpgaxh/image/upload/c_limit,w_1400/f_auto/q_auto/v1789058406/solutions_header_image.png");
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-position:center right;
-  filter:drop-shadow(0 0 24px rgba(81,105,255,.16));
+  filter:drop-shadow(0 0 26px rgba(81,105,255,.18));
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 6%,rgba(0,0,0,.82) 19%,#000 29%,#000 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 6%,rgba(0,0,0,.82) 19%,#000 29%,#000 100%);
 }
-/* The supplied image contains the complete hero artwork, so suppress the old coded approximation. */
-body[data-page="solutions"] .solutions-space{display:none!important}
+body[data-page="solutions"] .solutions-hero-art::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(2,5,10,.22) 0%,transparent 17%,transparent 80%,rgba(2,5,10,.34) 100%);
+  pointer-events:none;
+}
+/* Keep the reference labels as live text, but suppress the old CSS-drawn planet/streams. */
+body[data-page="solutions"] .solutions-space{
+  display:block!important;
+  position:absolute;
+  inset:0;
+  z-index:3;
+  overflow:visible;
+}
+body[data-page="solutions"] .solution-stream,
+body[data-page="solutions"] .solution-node,
+body[data-page="solutions"] .solution-hub,
+body[data-page="solutions"] .solutions-planet{display:none!important}
+body[data-page="solutions"] .solutions-keywords{
+  right:5.5%;
+  top:13%;
+  display:grid;
+  gap:7px;
+  color:#8599ef;
+  font-size:9px;
+  letter-spacing:.31em;
+  line-height:1.45;
+  font-weight:700;
+  text-shadow:0 0 12px rgba(77,102,255,.25);
+}
+body[data-page="solutions"] .solutions-hero-caption{
+  left:13%;
+  right:5.5%;
+  bottom:10%;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  color:#8195ee;
+  font-size:9px;
+  letter-spacing:.29em;
+  line-height:1.6;
+  font-weight:700;
+}
+body[data-page="solutions"] .solutions-hero-caption span:first-child{
+  padding-left:12px;
+  border-left:1px solid #7089ff;
+}
+body[data-page="solutions"] .solutions-hero-caption span:last-child{margin-left:auto}
 
-/* Challenges: compact rows, stronger separators and brighter icons */
+/* Challenges: compact rows, stronger separators and brighter icons. */
 body[data-page="solutions"] .solutions-section{padding:19px 0 25px}
 body[data-page="solutions"] .solutions-heading{margin-bottom:15px}
 body[data-page="solutions"] .solution-row{
@@ -49,13 +133,13 @@ body[data-page="solutions"] .solution-why small,
 body[data-page="solutions"] .solution-tool small{color:#8197f4}
 body[data-page="solutions"] .solution-row>.pill{border-color:rgba(128,147,255,.75);box-shadow:0 0 14px rgba(75,99,255,.13)}
 
-/* Process: non-overlapping chevrons with a protected text safe-area. */
+/* Process: draw the chevrons behind the content so their notches can never clip text. */
 body[data-page="solutions"] .solutions-process{padding:17px 0 24px}
 body[data-page="solutions"] .solutions-process .solutions-heading{margin-bottom:11px}
 body[data-page="solutions"] .process-flow{
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
-  gap:8px;
+  gap:4px;
   overflow:visible;
 }
 body[data-page="solutions"] .process-step,
@@ -64,31 +148,42 @@ body[data-page="solutions"] .process-step:nth-child(2),
 body[data-page="solutions"] .process-step:nth-child(3),
 body[data-page="solutions"] .process-step:nth-child(4),
 body[data-page="solutions"] .process-step:nth-child(5){
+  position:relative;
   z-index:1!important;
-}
-body[data-page="solutions"] .process-step{
+  isolation:isolate;
   min-height:128px;
   margin:0!important;
-  padding:18px 30px 16px 56px;
-  background:linear-gradient(180deg,#07111a 0%,#050c13 100%);
-  border:1px solid rgba(103,130,216,.42);
-  box-shadow:inset 0 0 22px rgba(45,66,142,.08),0 8px 18px rgba(0,0,0,.18);
-  clip-path:polygon(8% 0,91% 0,100% 50%,91% 100%,8% 100%,0 50%);
-  overflow:hidden;
+  padding:18px 30px 16px 54px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  clip-path:none!important;
+  overflow:visible!important;
 }
-body[data-page="solutions"] .process-step:first-child{
-  clip-path:polygon(0 0,91% 0,100% 50%,91% 100%,0 100%);
-  padding-left:20px;
-}
+body[data-page="solutions"] .process-step:first-child{padding-left:20px!important}
+body[data-page="solutions"] .process-step::before,
 body[data-page="solutions"] .process-step::after{
   content:"";
   position:absolute;
-  right:8.5%;
-  top:0;
-  bottom:0;
-  width:1px;
-  background:linear-gradient(180deg,transparent,rgba(111,137,224,.30),transparent);
   pointer-events:none;
+}
+body[data-page="solutions"] .process-step::before{
+  inset:0;
+  z-index:-2;
+  background:rgba(103,130,216,.44);
+  clip-path:polygon(8% 0,91% 0,100% 50%,91% 100%,8% 100%,0 50%);
+}
+body[data-page="solutions"] .process-step::after{
+  inset:1px;
+  z-index:-1;
+  background:linear-gradient(180deg,#07121c 0%,#050c13 100%);
+  clip-path:polygon(8% 0,91% 0,100% 50%,91% 100%,8% 100%,0 50%);
+}
+body[data-page="solutions"] .process-step:first-child::before{
+  clip-path:polygon(0 0,91% 0,100% 50%,91% 100%,0 100%);
+}
+body[data-page="solutions"] .process-step:first-child::after{
+  clip-path:polygon(0 0,91% 0,100% 50%,91% 100%,0 100%);
 }
 body[data-page="solutions"] .process-top{
   position:relative;
@@ -101,10 +196,15 @@ body[data-page="solutions"] .process-top{
 body[data-page="solutions"] .process-num{border-color:#8298ff;box-shadow:0 0 12px rgba(76,102,255,.18);flex:0 0 auto}
 body[data-page="solutions"] .process-icon{width:34px;height:34px;color:#7e94ff;filter:drop-shadow(0 0 9px rgba(112,136,255,.5));flex:0 0 auto}
 body[data-page="solutions"] .process-step h3,
-body[data-page="solutions"] .process-step p{position:relative;z-index:2;margin-left:0!important;transform:none!important}
+body[data-page="solutions"] .process-step p{
+  position:relative;
+  z-index:2;
+  margin-left:0!important;
+  transform:none!important;
+}
 body[data-page="solutions"] .process-step p{max-width:220px}
 
-/* Mountain: reveal more detail and blue highlight while keeping page-black integration */
+/* Mountain: reveal detail and keep it integrated into the black page. */
 body[data-page="solutions"] .solutions-ridge{min-height:252px;padding:48px 0 35px}
 body[data-page="solutions"] .solutions-ridge::before{
   opacity:.96;
@@ -118,27 +218,39 @@ body[data-page="solutions"] .solutions-ridge::after{
 }
 body[data-page="solutions"] .values-five svg{color:#8096ff;filter:drop-shadow(0 0 10px rgba(103,128,255,.42))}
 
-/* Footer social icons to match reference */
+/* Footer social icons. */
 body[data-page="solutions"] .footer-links{display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:12px}
 body[data-page="solutions"] .footer-social{display:flex;gap:12px;align-items:center;margin-left:5px}
 body[data-page="solutions"] .footer-social a{width:24px;height:24px;display:grid;place-items:center;color:#dbe1ff}
 body[data-page="solutions"] .footer-social svg{width:18px;height:18px}
 body[data-page="solutions"] .solutions-heading h2{letter-spacing:-.038em}
 
-@media(max-width:1100px){
-  body[data-page="solutions"] .solutions-hero-art{background-size:cover;background-position:center}
-  body[data-page="solutions"] .process-step{padding-left:50px;padding-right:22px}
-  body[data-page="solutions"] .process-step:first-child{padding-left:18px}
+@media(max-width:1200px){
+  body[data-page="solutions"] .solutions-copy{width:52%}
+  body[data-page="solutions"] .solutions-copy h1{font-size:clamp(48px,4.4vw,62px)!important}
+  body[data-page="solutions"] .solutions-hero-art{width:60vw}
+  body[data-page="solutions"] .process-step{padding-left:48px!important;padding-right:22px!important}
+  body[data-page="solutions"] .process-step:first-child{padding-left:18px!important}
 }
 @media(max-width:860px){
-  body[data-page="solutions"] .solutions-hero{padding-top:42px}
-  body[data-page="solutions"] .solutions-hero-art{height:360px;background-size:contain;background-position:center}
+  body[data-page="solutions"] .solutions-hero{display:grid;grid-template-columns:1fr;padding-top:42px;min-height:auto}
+  body[data-page="solutions"] .solutions-copy{width:100%;max-width:none}
+  body[data-page="solutions"] .solutions-copy h1 em{white-space:normal}
+  body[data-page="solutions"] .solutions-hero-art{position:relative;top:auto;right:auto;width:100%;height:360px!important;min-height:360px;margin-top:12px}
+  body[data-page="solutions"] .solutions-hero-art::before{background-size:cover;background-position:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%)}
   body[data-page="solutions"] .process-flow{grid-template-columns:1fr 1fr;gap:10px}
-  body[data-page="solutions"] .process-step{clip-path:none!important;margin:0!important;padding:18px;border-radius:8px}
+  body[data-page="solutions"] .process-step,
+  body[data-page="solutions"] .process-step:first-child{padding:18px!important;min-height:128px}
+  body[data-page="solutions"] .process-step::before,
+  body[data-page="solutions"] .process-step::after,
+  body[data-page="solutions"] .process-step:first-child::before,
+  body[data-page="solutions"] .process-step:first-child::after{clip-path:none;border-radius:8px}
   body[data-page="solutions"] .footer-links{justify-content:flex-start}
 }
 @media(max-width:560px){
-  body[data-page="solutions"] .solutions-hero-art{height:300px}
+  body[data-page="solutions"] .solutions-hero-art{height:300px!important;min-height:300px}
+  body[data-page="solutions"] .solutions-keywords{font-size:7px;right:2%}
+  body[data-page="solutions"] .solutions-hero-caption{font-size:7px;left:5%;right:2%;bottom:6%}
   body[data-page="solutions"] .process-flow{grid-template-columns:1fr}
   body[data-page="solutions"] .footer-social{margin-left:0;margin-top:6px}
 }

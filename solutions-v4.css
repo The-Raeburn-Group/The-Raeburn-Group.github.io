@@ -1,0 +1,126 @@
+/* Solutions precision pass v4 — process-flow fix and final reference refinements. */
+
+/* Process flow: keep every label/title safely inside the chevron body. */
+body[data-page="solutions"] .process-flow{
+  gap:0;
+  overflow:visible;
+}
+body[data-page="solutions"] .process-step{
+  min-height:132px;
+  margin-right:-8px;
+  padding:20px 30px 16px 46px;
+  clip-path:polygon(0 0,90% 0,100% 50%,90% 100%,0 100%,8% 50%);
+  background:linear-gradient(180deg,#08121c 0%,#071019 100%);
+  border-color:rgba(91,118,192,.34);
+  box-shadow:inset 0 1px rgba(255,255,255,.018),0 0 0 1px rgba(24,46,104,.06);
+}
+body[data-page="solutions"] .process-step:first-child{
+  clip-path:polygon(0 0,90% 0,100% 50%,90% 100%,0 100%);
+  padding-left:20px;
+}
+body[data-page="solutions"] .process-top{
+  gap:15px;
+  margin-bottom:11px;
+}
+body[data-page="solutions"] .process-num{
+  width:31px;
+  height:31px;
+  flex:0 0 31px;
+}
+body[data-page="solutions"] .process-icon{
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  filter:drop-shadow(0 0 10px rgba(105,129,255,.42));
+}
+body[data-page="solutions"] .process-step h3{
+  margin:0 0 5px;
+  font-size:16px;
+  line-height:1.08;
+  position:relative;
+  z-index:2;
+}
+body[data-page="solutions"] .process-step p{
+  font-size:12px;
+  line-height:1.4;
+  max-width:210px;
+  position:relative;
+  z-index:2;
+}
+
+/* Slightly closer to the signed-off reference elsewhere. */
+body[data-page="solutions"] .solutions-heading{
+  margin-bottom:18px;
+}
+body[data-page="solutions"] .solutions-heading h2{
+  letter-spacing:-.038em;
+}
+body[data-page="solutions"] .solution-row{
+  min-height:102px;
+  border-color:rgba(92,119,192,.33);
+}
+body[data-page="solutions"] .solution-problem svg{
+  color:#7f94ff;
+  filter:drop-shadow(0 0 11px rgba(92,118,255,.5));
+}
+body[data-page="solutions"] .solution-problem,
+body[data-page="solutions"] .solution-why,
+body[data-page="solutions"] .solution-tool{
+  border-left-color:rgba(111,133,200,.31);
+}
+body[data-page="solutions"] .solution-row>.pill{
+  border-color:rgba(117,140,255,.7);
+  box-shadow:0 0 16px rgba(71,92,255,.12);
+}
+
+/* Reference shows a little more mountain detail and a cleaner transition. */
+body[data-page="solutions"] .solutions-ridge{
+  padding-top:48px;
+}
+body[data-page="solutions"] .solutions-ridge::before{
+  opacity:.94;
+  filter:grayscale(1) sepia(.05) hue-rotate(178deg) saturate(1) brightness(.48) contrast(1.3);
+}
+body[data-page="solutions"] .solutions-ridge::after{
+  background:linear-gradient(180deg,#02050a 0%,rgba(2,5,10,.025) 20%,rgba(2,5,10,.14) 67%,#02050a 100%),radial-gradient(ellipse at 50% 42%,rgba(66,91,199,.19),transparent 54%);
+}
+
+/* Footer/social alignment. */
+body[data-page="solutions"] .footer-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+  gap:12px;
+}
+body[data-page="solutions"] .footer-social{
+  display:inline-flex;
+  gap:11px;
+  align-items:center;
+  margin-left:4px;
+}
+body[data-page="solutions"] .footer-social a{
+  width:24px;
+  height:24px;
+  display:grid;
+  place-items:center;
+  color:#dbe1ff;
+}
+body[data-page="solutions"] .footer-social svg{
+  width:18px;
+  height:18px;
+}
+
+@media(max-width:1100px){
+  body[data-page="solutions"] .process-step{padding-left:40px;padding-right:24px}
+  body[data-page="solutions"] .process-step:first-child{padding-left:18px}
+}
+@media(max-width:860px){
+  body[data-page="solutions"] .process-step,
+  body[data-page="solutions"] .process-step:first-child{
+    clip-path:none;
+    margin-right:0;
+    padding:18px;
+  }
+  body[data-page="solutions"] .footer-links{justify-content:flex-start}
+}

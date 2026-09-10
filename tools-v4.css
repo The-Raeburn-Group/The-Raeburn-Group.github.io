@@ -101,6 +101,15 @@ body[data-page="tools"] .catalogue-card li{color:#cbd3e1}
 body[data-page="tools"] .card-actions .pill-primary{border-color:#8494ff;box-shadow:0 0 0 1px rgba(124,143,255,.28),0 0 19px rgba(74,97,255,.5),0 8px 24px rgba(36,52,133,.22)}
 body[data-page="tools"] .card-actions .pill-dark{border-color:rgba(138,151,205,.5)}
 
+/* Featured catalogue framing */
+body[data-page="tools"] .catalogue-intro{
+  margin:-4px 0 20px;
+  max-width:860px;
+  color:#9eabbf;
+  font-size:13px;
+  line-height:1.5;
+}
+
 /* Support illustration: five-panel depth and cleaner illuminated connections */
 body[data-page="tools"] .support-panel{grid-template-columns:.91fr 1.09fr;gap:34px;min-height:282px;padding:26px 32px}
 body[data-page="tools"] .support-visual{height:228px;border-right-color:rgba(108,132,226,.52)}

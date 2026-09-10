@@ -1,7 +1,7 @@
 (() => {
-  const WHITE_LOGO = 'https://res.cloudinary.com/u7dpgaxh/image/upload/c_limit,w_640/f_auto/q_auto/v1789044714/white_raeburn_engineering_logo.png';
-  const WHITE_R = 'https://res.cloudinary.com/u7dpgaxh/image/upload/v1789044778/white_R_logo.png';
-  const WHITE_R_FAVICON = 'https://res.cloudinary.com/u7dpgaxh/image/upload/c_fit,h_128,w_128/f_png/q_auto/v1789044778/white_R_logo.png';
+  const WHITE_LOGO = 'https://res.cloudinary.com/u7dpgaxh/image/upload/c_limit,w_640/f_auto/q_auto/v1789046452/1white_raeburn_engineering_logo.png';
+  const WHITE_R = 'https://res.cloudinary.com/u7dpgaxh/image/upload/v1789046455/white_R_orb_logo.png';
+  const WHITE_R_FAVICON = 'https://res.cloudinary.com/u7dpgaxh/image/upload/c_fit,h_128,w_128/f_png/q_auto/v1789046455/white_R_orb_logo.png';
 
   document.querySelectorAll('.site-logo-image').forEach((img) => {
     img.src = WHITE_LOGO;
@@ -23,7 +23,7 @@
       if (document.querySelector(`link[href^="${href}"]`)) return;
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = `${href}?v=20260910-8`;
+      link.href = `${href}?v=20260910-9`;
       document.head.appendChild(link);
     };
 
